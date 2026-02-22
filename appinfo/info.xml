@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>claudechat</id>
+    <name>Claude AI Chat</name>
+    <summary>Chat with Claude AI – per-user history and file analysis</summary>
+    <description><![CDATA[
+        Integrate Anthropic's Claude AI into your Nextcloud.
+        Features:
+        - Personal chat interface per user
+        - Persistent conversation history
+        - File analysis (select files from your Nextcloud)
+        - Admin configuration for API key and model selection
+    ]]></description>
+    <version>1.0.0</version>
+    <licence>agpl</licence>
+    <author mail="admin@example.com">Your Name</author>
+    <namespace>ClaudeChat</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/yourname/claudechat/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="25" />
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Claude AI</name>
+            <route>claudechat.page.index</route>
+            <icon>app.svg</icon>
+            <order>5</order>
+        </navigation>
+    </navigations>
+    <settings>
+        <admin>OCA\ClaudeChat\Settings\Admin</admin>
+        <admin-section>OCA\ClaudeChat\Settings\AdminSection</admin-section>
+    </settings>
+</info>
